@@ -1,0 +1,16 @@
+query conversitions($forArray: [String!]!) {
+  latest(quoteCurrencies: $forArray) {
+    date
+    baseCurrency
+    quoteCurrency
+    quote
+  }
+}
+
+query allCurrencies {
+  latest {
+    baseCurrency
+    quoteCurrency
+    quote
+  }
+}
